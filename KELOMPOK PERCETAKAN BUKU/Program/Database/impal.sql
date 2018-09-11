@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2018 at 05:05 PM
+-- Generation Time: Sep 11, 2018 at 05:12 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -71,7 +71,8 @@ CREATE TABLE `transaksi` (
   `idUser` int(255) NOT NULL,
   `idDelivery` int(255) NOT NULL,
   `tagihan` int(255) NOT NULL,
-  `payment` varchar(20) NOT NULL
+  `payment` varchar(20) NOT NULL,
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

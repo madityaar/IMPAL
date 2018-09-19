@@ -42,7 +42,14 @@
             </li>
             <li class="nav-item">
               <?php if ($this->session->has_userdata("nama")) {
-               echo '<a class="nav-link" href="#">'.$this->session->userdata("nama").'</a>';
+                echo '<li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    '.$this->session->userdata("nama").'
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="'.base_url().'Login/logout">Logout</a>
+                  </div>
+                </li>';
              }else{
                echo '<a class="nav-link" href="'.base_url().'Login">Login</a>';
              }?>

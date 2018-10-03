@@ -96,7 +96,7 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
 
-        <li class="nav-item">
+      <li class="nav-item">
           <a class="nav-link" href="delivery.html">
             <i class="fas fa-fw fa-car"></i>
             <span>Delivery</span></a>
@@ -136,37 +136,39 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Data Table Example</div>
+              Produk</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-
-                      <th>idDelivery</th>
-                      <th>no_resi</th>
-                      <th>kurir</th>
-                      <th>tgl_kirim</th>
+                      <th>idProduk</th>
+                      <th>namaProduk</th>
+                      <th>lebar</th>
+                      <th>panjang</th>
+                      <th>harga satuan</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>121</td>
-                      <td>2111</td>
-                      <td>gojeg</td>
-                      <td>12/12/2012</td>
+                      <td>1</td>
+                      <td>Flyers, printed on both sides</td>
+                      <td>3,5</td>
+                      <td>8,5</td>
+                      <td>1000</td>
                     <td>
 	    				<button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#edit"><i class="glyphicon glyphicon-pencil"></i></button>
 	    				<button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete"><i class="glyphicon glyphicon-trash"></i></button>
     				</td>
                     </tr>
                     <tr>
-                      <td>1121</td>
-                      <td>12111</td>
-                      <td>burung merpati</td>
-                      <td>12/12/2012111</td>
-            <td>
+                      <td>2</td>
+                      <td>Flyers, printed on one sides</td>
+                      <td>3,5</td>
+                      <td>8,5</td>
+                      <td>8000</td>
+                    <td>
 	    				<button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#edit"><i class="glyphicon glyphicon-pencil"></i></button>
 	    				<button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete"><i class="glyphicon glyphicon-trash"></i></button>
     				</td>
@@ -229,23 +231,27 @@
     				<div class="modal-content">
     					<div class="modal-header">
     						<button type="button" class="close" data-dismiss="modal"></button>
-    						<h4 class="modal-tittle">Edit Delivery
+    						<h4 class="modal-tittle">Edit Produk
     						</h4>
     					</div>
     					
     					<div class="modal-body">
     						<div class="form-group">
-    							<label class="control-label" for="status">No Resi</label>
+    							<label class="control-label" for="status">Nama</label>
     							<input type="text" name="status" class="form-control" id="status" required>
     						</div>
     						<div class="form-group">
-    							<label class="control-label" for="tagihan">Kurir</label>
+    							<label class="control-label" for="tagihan">Lebar</label>
     							<input type="number" name="tagihan" class="form-control"  id="tagihan" required>
     						</div>
 
 
     						<div class="form-group">
-    							<label class="control-label" for="pesenapaajaadmin">Tgl Kirim</label>
+    							<label class="control-label" for="pesenapaajaadmin">Panjang</label>
+    							<input type="textarea" name="pesenapaajaadmin" class="form-control" " id="pesenapaajaadmin" required>
+    						</div>
+ 							<div class="form-group">
+    							<label class="control-label" for="pesenapaajaadmin">Harga Satuan</label>
     							<input type="textarea" name="pesenapaajaadmin" class="form-control" " id="pesenapaajaadmin" required>
     						</div>
     					</div>

@@ -20,6 +20,40 @@
 
   <body>
 
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Login</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form action="<?php echo base_url('Login/aksi_login'); ?>" method="post">
+				<table>
+					<tr>
+						<td>Username</td>
+						<td><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Login"></td>
+					</tr>
+				</table>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<div>Belum punya id? </div><a href="<?php echo base_url('Registration'); ?>">Daftar Sekarang!</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -49,9 +83,12 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="'.base_url().'Login/logout">Logout</a>
                   </div>
+				  
                 </li>';
              }else{
-               echo '<a class="nav-link" href="'.base_url().'Login">Login</a>';
+               echo '<a  class="nav-link" data-toggle="modal" data-target="#loginModal">
+					  Login
+				</a>';
              }?>
             </li>
           </ul>
@@ -64,7 +101,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="display-3 text-center text-white mt-4">Percetakan</h1>
+            <h1 class="display-3 text-center text-black mt-4">Percetakan</h1>
           </div>
         </div>
       </div>
@@ -160,3 +197,5 @@
   </body>
 
 </html>
+
+

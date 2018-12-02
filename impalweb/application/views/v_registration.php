@@ -1,12 +1,12 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<?php
+include 'header.php';
+?>
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container-fluid">
     <section class="container">
 		<div class="container-page">				
-			<div class="">
+			<div class="mainbody">
 				<h3 class="dark-grey">Registration</h3>
 				
 				<form method="post">
@@ -53,3 +53,5 @@
 		</div>
 	</section>
 </div>
+
+<?php include 'footer.php';?>

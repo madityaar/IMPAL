@@ -7,6 +7,7 @@
 	<?php
 		$smsg=$this->session->flashdata('smsg');
 		$emsg=$this->session->flashdata('emsg');
+		include 'header.php';
 		if($emsg){
 			echo $emsg;
 		}
@@ -24,6 +25,6 @@
 
 		</table>	
 	</form>
-
+<?php include 'footer.php'?>
 </body>
 </html>

@@ -28,7 +28,7 @@ class Registration extends CI_Controller
 			{
 					 $data['username'] =    $this->input->post('username');
 					 $data['email']  =    $this->input->post('email');
-					 $data['password'] =    md5($this->input->post('password'));
+					 $data['password'] =    $this->input->post('password');
 					 $data['firstname'] = $this->input->post('firstName');
 					 $data['lastname'] = $this->input->post('lastName');
 					 $data['telepon'] = $this->input->post('telepon');

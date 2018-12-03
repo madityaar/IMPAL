@@ -8,10 +8,11 @@ class Myaccount extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('M_myaccount');
+		$this->load->model('M_alamat');
 
 	}
 	public function index()
-	{
+	{	
 		$where = array(
 			'idUser' => $this->session->userdata('id')
 			);
@@ -29,11 +30,21 @@ class Myaccount extends CI_Controller {
 			$where = array(
 			'idAlamat' => $query['0']['alamat']
 			);
-		}else{
+			$queryaddress= $this->M_alamat->load_address($where);
 			$data_session = array(
-				'Alamat' => 0,
+				'Alamat' => $queryaddress['0']['Alamat'],
+				'Kodepos' => $queryaddress['0']['KodePos'],
+				'noTelp' => $queryaddress['0']['NomerTelepon'],
+				'Perusahaan' => $queryaddress['0']['Perusahaan']
 				);
 			$this->session->set_userdata($data_session);
+			
+		}else{
+			$data_session = array(
+				'Alamat' => 'false',
+				);
+			$this->session->set_userdata($data_session);
+			
 		}
 		$this->load->view('myaccount');
 

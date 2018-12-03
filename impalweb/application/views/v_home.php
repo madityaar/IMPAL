@@ -24,20 +24,15 @@
 
       <div class="row">
         <div class="col-sm-8">
-          <h2 class="mt-4">What We Do</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+          <h2 class="mt-4">Mau Ngeprint Tapi Gamau Ribet?</h2>
+          
+            <a class="btn btn-primary btn-lg" href="#">Order Now &raquo;</a>
           </p>
         </div>
         <div class="col-sm-4">
           <h2 class="mt-4">Contact Us</h2>
           <address>
             <strong>Percetakan</strong>
-            <br>Jangan
-            <br>Dikontak
-            <br>
           </address>
           <address>
             <abbr title="Phone">P:</abbr>
@@ -53,9 +48,9 @@
       <div class="row">
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="https://pbs.twimg.com/profile_images/896540882148745219/znT0TbV4_400x400.jpg" alt="">
+            <img class="card-img-top" src="<?php echo base_url() ?>img/booklet.jpg" alt="">
             <div class="card-body">
-              <h4 class="card-title">Card title</h4>
+              <h4 class="card-title">Cetak Booklet</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
             </div>
             <div class="card-footer">
@@ -65,9 +60,9 @@
         </div>
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="https://ih0.redbubble.net/image.345293314.1947/mp,550x550,matte,ffffff,t.3.jpg" alt="">
+            <img class="card-img-top" src="<?php echo base_url() ?>img/2.jpg" alt="">
             <div class="card-body">
-              <h4 class="card-title">Card title</h4>
+              <h4 class="card-title">Cetak Photo</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
             </div>
             <div class="card-footer">
@@ -77,9 +72,9 @@
         </div>
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMiJwVEs1CdW3-qJsQ3-FYqSvmHKcVz2JKpeIIaxxKvxBHAhn9" alt="">
+            <img class="card-img-top" src="<?php echo base_url() ?>img/jenis-kertas-brosur-2.jpg" alt="">
             <div class="card-body">
-              <h4 class="card-title">Card title</h4>
+              <h4 class="card-title">Cetak Brosur</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">

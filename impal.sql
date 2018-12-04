@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2018 at 07:40 AM
+-- Generation Time: Dec 04, 2018 at 01:53 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -65,6 +65,53 @@ INSERT INTO `detail` (`idTransaksi`, `idStorage`, `idProduk`, `quantity`) VALUES
 (11, 6, 4, 9),
 (13, 7, 2, 3),
 (14, 8, 3, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detailalamat`
+--
+
+CREATE TABLE `detailalamat` (
+  `idAlamat` int(11) NOT NULL,
+  `Alamat` varchar(255) NOT NULL,
+  `KodePos` varchar(6) NOT NULL,
+  `NomerTelepon` varchar(13) NOT NULL,
+  `Perusahaan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detailalamat`
+--
+
+INSERT INTO `detailalamat` (`idAlamat`, `Alamat`, `KodePos`, `NomerTelepon`, `Perusahaan`) VALUES
+(1, 'Jln Surya Sumantri', '40175', '082216648470', 'PT Sumber Makmur'),
+(2, 'Jln Surya Sumantri', '40002', '0823239321', 'PT Sumber Makmur'),
+(3, 'Jln Surya Sumantri', '40011', '082216648470', 'PT Sumber Jamur');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `idProduk` int(11) NOT NULL,
+  `namaProduk` varchar(100) NOT NULL,
+  `lebar` varchar(5) NOT NULL,
+  `panjang` varchar(5) NOT NULL,
+  `hargaSatuan` decimal(19,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`idProduk`, `namaProduk`, `lebar`, `panjang`, `hargaSatuan`) VALUES
+(1, 'Banner', '1.5', '1.5', '2000'),
+(2, 'Banner', '2', '2', '3000'),
+(3, 'Banner', '4', '4', '4000'),
+(4, 'Banner', '5', '5', '5000');
 
 -- --------------------------------------------------------
 
@@ -172,6 +219,18 @@ ALTER TABLE `detail`
   ADD KEY `idProduk` (`idProduk`);
 
 --
+-- Indexes for table `detailalamat`
+--
+ALTER TABLE `detailalamat`
+  ADD PRIMARY KEY (`idAlamat`);
+
+--
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`idProduk`);
+
+--
 -- Indexes for table `storage`
 --
 ALTER TABLE `storage`
@@ -201,6 +260,18 @@ ALTER TABLE `user`
 --
 ALTER TABLE `delivery`
   MODIFY `idDelivery` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `detailalamat`
+--
+ALTER TABLE `detailalamat`
+  MODIFY `idAlamat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `storage`

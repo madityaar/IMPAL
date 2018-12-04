@@ -63,3 +63,78 @@ footer{
     margin-right: -200px;
     margin-top: 50px;
 }
+.produk{
+    margin: 30px auto;
+    
+}
+.produk td{
+    padding: 10px;
+    margin: 20px;
+}
+.produk th{
+    background-color: orange;
+    padding: 10px;
+}
+.namaproduk{
+    width:150px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.fotoproduk{
+    margin: 40px auto;
+}
+.belibtn{
+    text-align: center; 
+    vertical-align: middle;
+    color: white;
+}
+
+.password{
+    background-color: white !important;
+}
+
+.jumlah{
+    font-weight: bold;
+    font-size: 30px;
+    float: right;
+    margin-right: 600px;
+    margin-bottom: 30px;
+}
+
+.billingk{
+    margin-left: 100px;
+    border: 2px solid black;
+    padding: 10px 30px;
+    width:30%;
+}
+.btnnext{
+    color:white !important;
+    float: right;
+    margin-right: 200px;
+}
+
+.transaksi{
+    margin: 30px auto;
+    
+}
+.transaksi td{
+    padding: 10px;
+    margin: 20px;
+}
+.transaksi th{
+    background-color: orange;
+    padding: 10px;
+}
+.delivery{
+    margin: 30px auto;
+    
+}
+.delivery td{
+    padding: 10px;
+    margin: 20px;
+}
+.delivery th{
+    background-color: orange;
+    padding: 10px;
+}

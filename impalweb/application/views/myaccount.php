@@ -1,8 +1,8 @@
 <?php include 'header.php'?>
 
 <div class="sidenav">
-  <a href="#">My Account</a>
-  <a href="#">My Order</a>
+    <a href="<?php echo base_url()?>Myaccount">My Account</a>
+    <a href="<?php echo base_url()?>Myaccount/Order">My Order</a>
 </div>
 
 <div class="main container">

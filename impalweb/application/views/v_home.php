@@ -48,13 +48,13 @@
       <div class="row">
         <div class="col-sm-4 my-4">
           <div class="card">
-            <img class="card-img-top" src="<?php echo base_url() ?>img/booklet.jpg" alt="">
+            <img class="card-img-top" src="<?php echo base_url() ?>img/pull-up-banner.jpg" alt="">
             <div class="card-body">
-              <h4 class="card-title">Cetak Booklet</h4>
+              <h4 class="card-title">Cetak Banner</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+              <a href="<?php echo base_url() ?>Produk/Banner" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+              <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
+              <a href="" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>

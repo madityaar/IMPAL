@@ -36,9 +36,9 @@
 						<td>Username</td>
 						<td><input type="text" name="username"></td>
 					</tr>
-					<tr>
+					<tr class="password">
 						<td>Password</td>
-						<td><input type="password" name="password"></td>
+						<td ><input type="password" name="password"></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -69,7 +69,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Product</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Services</a>

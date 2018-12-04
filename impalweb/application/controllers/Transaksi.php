@@ -14,7 +14,15 @@ class Transaksi extends CI_Controller{
 			'idProduk' => $this->input->get('produk')
 			);
 		$data['transaksi']=$this->M_transaksi->load_data($where);
-		$this->load->view('v_transaksi',$data);
+		if($this->session->has_userdata('id')){
+			$this->load->view('v_transaksi',$data);
+		}else{
+			$message= 'Anda Harus Login Terlebih Dahulu';
+					 echo "<script type='text/javascript'>alert('".$message."');
+						window.location.href = '".base_url()."';
+					 </script>";
+		};
+		
 	}
 
 	function Konfirmasi(){

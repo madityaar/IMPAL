@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Admin</title>
+	<title>Membuat login dengan codeigniter | www.malasngoding.com</title>
 </head>
 <body>
-	<h1>Login Admin</h1>
-	<form action="<?php echo base_url('loginadmin/aksi_login'); ?>" method="post">
-		<table>
-			<tr>
-				<td>Username</td>
-				<td><input type="text" name="username"></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Login"></td>
-			</tr>
-		</table>
-	</form>
+	<h1>Login berhasil !</h1>
+	<h2>Hai, <?php echo $this->session->userdata("nama"); ?></h2>
+	<a href="<?php echo base_url('login/logout'); ?>">Logout</a>
 </body>
 </html>

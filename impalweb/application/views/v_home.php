@@ -25,23 +25,8 @@
       <div class="row">
         <div class="col-sm-8">
           <h2 class="mt-4">Mau Ngeprint Tapi Gamau Ribet?</h2>
-          
-            <a class="btn btn-primary btn-lg" href="#">Order Now &raquo;</a>
-          </p>
         </div>
-        <div class="col-sm-4">
-          <h2 class="mt-4">Contact Us</h2>
-          <address>
-            <strong>Percetakan</strong>
-          </address>
-          <address>
-            <abbr title="Phone">P:</abbr>
-            (123) 456-7890
-            <br>
-            <abbr title="Email">E:</abbr>
-            <a href="mailto:#">bftiga@gmail.com</a>
-          </address>
-        </div>
+        
       </div>
       <!-- /.row -->
 
@@ -66,7 +51,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Shop Now</a>
+              <a href="<?php echo base_url() ?>Produk/Photo" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
@@ -78,7 +63,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="" class="btn btn-primary">Shop Now</a>
+              <a href="<?php echo base_url() ?>Produk/Brosur" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>

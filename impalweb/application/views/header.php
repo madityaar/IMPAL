@@ -63,16 +63,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url(); ?>">Home
-                <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
               <?php if ($this->session->has_userdata("nama")) {

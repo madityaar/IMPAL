@@ -70,7 +70,7 @@ class Myaccount extends CI_Controller {
 			'idProduk' => $idproduk
 			);
 		$produk = $this->M_myaccount->load_data('produk',$where);
-		$data['namaproduk']=$produk[0]['namaProduk']." ".$produk[0]['panjang']." m x ".$produk[0]['panjang']." m ";
+		$data['namaproduk']=$produk[0]['namaProduk']." ".$produk[0]['panjang']." x ".$produk[0]['panjang']." ";
 		$idstorage=$detail[0]['idStorage'];
 		$where = array(
 			'idStorage' => $idstorage

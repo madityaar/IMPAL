@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2018 at 01:53 PM
+-- Generation Time: Dec 04, 2018 at 06:03 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -64,7 +64,8 @@ INSERT INTO `detail` (`idTransaksi`, `idStorage`, `idProduk`, `quantity`) VALUES
 (9, 5, 4, 9),
 (11, 6, 4, 9),
 (13, 7, 2, 3),
-(14, 8, 3, 5);
+(14, 8, 3, 5),
+(15, 9, 7, 3);
 
 -- --------------------------------------------------------
 
@@ -111,7 +112,11 @@ INSERT INTO `produk` (`idProduk`, `namaProduk`, `lebar`, `panjang`, `hargaSatuan
 (1, 'Banner', '1.5', '1.5', '2000'),
 (2, 'Banner', '2', '2', '3000'),
 (3, 'Banner', '4', '4', '4000'),
-(4, 'Banner', '5', '5', '5000');
+(4, 'Banner', '5', '5', '5000'),
+(5, 'Brosur 1 Sisi', '20', '10', '4000'),
+(6, 'Brosur 2 Sisi', '20', '10', '6000'),
+(7, 'Photo Frame', '3', '4', '3000'),
+(8, 'Photo ', '3', '4', '5000');
 
 -- --------------------------------------------------------
 
@@ -135,7 +140,8 @@ INSERT INTO `storage` (`idStorage`, `filename`) VALUES
 (5, '55rXIcs2.jpg'),
 (6, '55rXIcs3.jpg'),
 (7, '55rXIcs4.jpg'),
-(8, 'This+this+feels+like+it+should+be+a+felony+_746fbbe4397005b8b3cbf50333b2c250.jpg');
+(8, 'This+this+feels+like+it+should+be+a+felony+_746fbbe4397005b8b3cbf50333b2c250.jpg'),
+(9, 'U5qP8TjJ_400x400.jpg');
 
 -- --------------------------------------------------------
 
@@ -169,7 +175,8 @@ INSERT INTO `transaksi` (`idTransaksi`, `idUser`, `idDelivery`, `tagihan`, `stat
 (11, 11, NULL, 45000, 'Waiting Payment'),
 (12, 12, NULL, 9000, 'Waiting Payment'),
 (13, 12, NULL, 9000, 'Waiting Payment'),
-(14, 12, NULL, 20000, 'Waiting Payment');
+(14, 12, NULL, 20000, 'Waiting Payment'),
+(15, 11, NULL, 9000, 'Waiting Payment');
 
 -- --------------------------------------------------------
 
@@ -271,19 +278,19 @@ ALTER TABLE `detailalamat`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `storage`
 --
 ALTER TABLE `storage`
-  MODIFY `idStorage` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idStorage` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `idTransaksi` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idTransaksi` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`

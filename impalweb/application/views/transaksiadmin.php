@@ -130,6 +130,10 @@
                                         <label class="control-label" for="judul">Tagihan</label>
                                         <input type="text" name="tagihan" class="form-control" value="<?php echo $key->tagihan;?>" id="tagihan" required>
                                     </div>
+                                   <div class="form-group">
+                                        <label class="control-label" for="judul">idDelivery</label>
+                                        <input type="text" name="idDelivery" class="form-control" value="<?php echo $key->idDelivery;?>" id="idDelivery" required>
+                                    </div>                                    
                                     <div class="form-group">
                                         <label class="control-label" for="panjang">Status</label>
                                         <input type="text" name="status" class="form-control" value="<?php echo $key->status;?>" id="status" required>

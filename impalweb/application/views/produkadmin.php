@@ -93,7 +93,7 @@
     <td><?php echo $key->hargaSatuan; ?></td>
     <td>
        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit<?php echo $key->idProduk; ?>"><i class="glyphicon glyphicon-pencil"></i></button>
-        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idProduk; ?>"><i class="glyphicon glyphicon-trash"></i></button>
+<!--         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idProduk; ?>"><i class="glyphicon glyphicon-trash"></i></button> -->
     </td>
 
       

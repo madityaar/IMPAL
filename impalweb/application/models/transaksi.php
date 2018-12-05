@@ -23,9 +23,10 @@ public function get_data()
 
   public function edit_data($data,$hafis){
     $tagihan=$data['tagihan'];
+    $idDelivery=$data['idDelivery'];
     $status=$data['status'];
         //$this->db->where('judul', $data['judul']);
-        $update = $this->db->query("Update transaksi set tagihan=$tagihan, status='$status' where idTransaksi=$hafis ;");
+        $update = $this->db->query("Update transaksi set tagihan=$tagihan, status='$status',idDelivery=$idDelivery where idTransaksi=$hafis ;");
         if ($update){
               header('Location: http://localhost/impalweb/index.php/controltransaksi/');
 

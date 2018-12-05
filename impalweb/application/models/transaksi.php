@@ -1,37 +1,39 @@
-class transaksi extends CI_Model
-{
-  // example of attributes
-  private $idTransaksi ;
-  private $idUser ;
-  private $idDelivery ;
-  private $tagihan ;
-  private $payment ;
-  private $status ;
+<?php 
+defined('BASEPATH') or exit('No direct script access allowed');
+class transaksi extends CI_Model{
 
-  // base constructor
-  public function __construct()
+public function get_data()
   {
-    parent::__construct();
-
+    $query = $this->db->order_by('idTransaksi','DESC')->get('transaksi');
+    return $query->result();
   }
-
-  // my personnal "constructor"
-  public function make($params)
-  {
-
+  public function gettransaksi(){
+    return $this->db->query("select * from transaksi")->result();
   }
-   // getter and setter
-  public function getidTransaksi() { return $this->idTransaksi ; }
-  public function getidUser() { return $this->idUser ; }
-  public function getidDelivery() { return $this->idDelivery ; }
-  public function gettagihan() { return $this->tagihan ; }
-  public function getpayment() { return $this->payment ; }
-  public function getstatus() { return $this->status ; }
-} // end of class
+  // public function delete_data($idTransaksi){
+  //      $delete=$this->db->query("delete from transaksi where idTransaksi=$idTransaksi");
+  //       if ($delete){
+  //       header('Location: http://localhost/impalweb/index.php/controltransaksi/');
+  //           return TRUE;
+  //       }else{
+  //       header('Location: http://localhost/impalweb/index.php/controltransaksi/');
+  //           return FALSE;
+  //       }
+  //   }
 
-//_________________________
-// in controller or view
-  $this->load->model('Test') ; // if model is not loaded
-  $params = 'titi' ;
-  $r = new Test() ; // or $r = new Test ;
-  $r->make($params) ;
+  public function edit_data($data,$hafis){
+    $tagihan=$data['tagihan'];
+    $status=$data['status'];
+        //$this->db->where('judul', $data['judul']);
+        $update = $this->db->query("Update transaksi set tagihan=$tagihan, status='$status' where idTransaksi=$hafis ;");
+        if ($update){
+              header('Location: http://localhost/impalweb/index.php/controltransaksi/');
+
+            return TRUE;
+        }else{
+              header('Location: http://localhost/impalweb/index.php/controltransaksi/');
+            return FALSE;
+        }
+          }
+}
+?>

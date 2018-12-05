@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Transaksi - Admin</title>
+    <title>Delivery - Admin</title>
 
     <!-- Bootstrap core CSS-->
     <link href="<?php echo base_url()?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,12 +39,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="http://localhost/impalweb/index.php/controlproduk/">Produk
+              <a class="nav-link" href="http://localhost/impalweb/index.php/controldelivery/">Produk
+                <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/impalweb/index.php/controltransaksi/">Transaksi</a>
-                <span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/impalweb/index.php/controldelivery/">Delivery</a>
@@ -67,17 +67,16 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Transaksi</div>
+              Produk</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>ID transaksi</th>
-                      <th>ID User</th>
-                      <th>ID Delivery</th>
-                      <th>Tagihan</th>
-                      <th>Status</th>
+                      <th>ID Produk</th>
+                      <th>Nama Produk</th>
+                      <th>kurir</th>
+                      <th>tgl_kirim</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -86,28 +85,27 @@
   foreach ($data as $key):
   ?>
   <tr>
-    <td><?php echo $key->idTransaksi; ?></td>
-    <td><?php echo $key->idUser; ?></td>
     <td><?php echo $key->idDelivery; ?></td>
-    <td><?php echo $key->tagihan; ?></td>
-    <td><?php echo $key->status; ?></td>
+    <td><?php echo $key->no_resi; ?></td>
+    <td><?php echo $key->kurir; ?></td>
+    <td><?php echo $key->tgl_kirim; ?></td>
     <td>
-       <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit<?php echo $key->idTransaksi; ?>"><i class="glyphicon glyphicon-pencil"></i></button>
-<!--         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idTransaksi; ?>"><i class="glyphicon glyphicon-trash"></i></button> -->
+       <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit<?php echo $key->idDelivery; ?>"><i class="glyphicon glyphicon-pencil"></i></button>
+        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idDelivery; ?>"><i class="glyphicon glyphicon-trash"></i></button>
     </td>
 
       
   </tr>
                   
 
-                  <div id="delete<?php echo $key->idTransaksi; ?>" class="modal fade" role="dialog">
+                      <div id="delete<?php echo $key->idDelivery; ?>" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"></button>
                                     <h4 class="modal-title">Anda Ingin Menghapus?</h4>
-                                    <?php echo form_open("http://localhost/impalweb/index.php/controltransaksi/hapus?idTransaksi='$key->idTransaksi'"); ?>
-                                    <input type="hidden" name="hapus" class="form-control" value="<?php echo $key->idTransaksi;?>" id="hapus" required>
+                                    <?php echo form_open("http://localhost/impalweb/index.php/controldelivery/hapus?idDelivery='$key->idDelivery'"); ?>
+                                    <input type="hidden" name="hapus" class="form-control" value="<?php echo $key->idDelivery;?>" id="hapus" required>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" data-dismiss="modal" class="btn btn-danger">Tidak</button>
@@ -117,22 +115,26 @@
                             </div>
                         </div>
                     </div>
-                    <div id="edit<?php echo $key->idTransaksi; ?>" class="modal fade" role="dialog">
+                    <div id="edit<?php echo $key->idDelivery; ?>" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"></button>
-                                    <h4 class="modal-title">Edit Transaksi</h4>
+                                    <h4 class="modal-title">Edit Delivery</h4>
                                 </div>
-                                <?php echo form_open("http://localhost/impalweb/index.php/controltransaksi/edit?idTransaksi='$key->idTransaksi'"); ?>
+                                <?php echo form_open("http://localhost/impalweb/index.php/controldelivery/edit?idDelivery='$key->idDelivery'"); ?>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="control-label" for="judul">Tagihan</label>
-                                        <input type="text" name="tagihan" class="form-control" value="<?php echo $key->tagihan;?>" id="tagihan" required>
+                                        <label class="control-label" for="judul">Nama Produk</label>
+                                        <input type="text" name="no_resi" class="form-control" value="<?php echo $key->no_resi;?>" id="no_resi" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="panjang">Status</label>
-                                        <input type="text" name="status" class="form-control" value="<?php echo $key->status;?>" id="status" required>
+                                        <label class="control-label" for="kurir">kurir</label>
+                                        <input type="text" name="kurir" class="form-control" value="<?php echo $key->kurir;?>" id="kurir" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="tgl_kirim">tgl_kirim</label>
+                                        <input type="text" name="tgl_kirim" class="form-control" value="<?php echo $key->tgl_kirim;?>" id="tgl_kirim" required>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -146,6 +148,41 @@
 
 
 
+                    <div id="tambahkan" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">Tambah Produk</h4>
+                                </div>
+                                <?php echo form_open("http://localhost/impalweb/index.php/controldelivery/tambah"); ?>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label class="control-label" for="judul">Nama Produk</label>
+                                        <input type="text" name="no_resi" class="form-control" id="no_resi" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="harga">kurir</label>
+                                        <input type="text" name="kurir" class="form-control" id="kurir" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="deskripsi">tgl_kirim</label>
+                                        <input type="text" name="tgl_kirim" class="form-control" id="tgl_kirim" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="hargaSatuan">Harga Satuan</label>
+                                        <input type="text" name="hargaSatuan" class="form-control" id="hargaSatuan" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                                    <input type="submit" class="btn btn-primary" name="tambah" value="tambah">
+                                </div>
+                                <?php echo form_close(); ?>
+                            </div>
+                        </div>
+                    </div>
+
 
 
   <?php 
@@ -155,6 +192,7 @@
 
                   </tbody>
                 </table>
+               <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#tambahkan">TAMBAH</button></a>
               </div>
             </div>
             <div class="card-footer small text-muted">Tugas Impal</div>

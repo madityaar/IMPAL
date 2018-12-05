@@ -46,9 +46,6 @@
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/impalweb/index.php/controltransaksi/">Transaksi</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost/impalweb/index.php/controldelivery/">Delivery</a>
-            </li>
 
           </ul>
         </div>

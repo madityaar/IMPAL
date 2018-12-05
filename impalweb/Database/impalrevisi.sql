@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2018 at 05:12 PM
+-- Generation Time: Sep 27, 2018 at 04:01 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -44,8 +44,8 @@ CREATE TABLE `delivery` (
 CREATE TABLE `detail` (
   `idTransaksi` int(255) NOT NULL,
   `idStorage` int(255) NOT NULL,
-  `quantity` int(255) NOT NULL,
-  `harga_satuan` int(255) NOT NULL
+  `idProduk` int(11) NOT NULL,
+  `quantity` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -69,7 +69,7 @@ CREATE TABLE `storage` (
 CREATE TABLE `transaksi` (
   `idTransaksi` int(255) NOT NULL,
   `idUser` int(255) NOT NULL,
-  `idDelivery` int(255) NOT NULL,
+  `idDelivery` int(255) DEFAULT NULL,
   `tagihan` int(255) NOT NULL,
   `payment` varchar(20) NOT NULL,
   `status` varchar(10) NOT NULL
@@ -85,20 +85,11 @@ CREATE TABLE `user` (
   `idUser` int(255) NOT NULL,
   `username` varchar(16) NOT NULL,
   `password` char(10) NOT NULL,
-  `alamat` varchar(100) NOT NULL,
+  `alamat` int(11) NOT NULL,
   `firstName` varchar(16) NOT NULL,
   `lastName` varchar(16) NOT NULL,
   `no_telp` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`idUser`, `username`, `password`, `alamat`, `firstName`, `lastName`, `no_telp`) VALUES
-(1, 'adityaray', '123456', 'jln. jalan', 'Aditya', 'Ray', '081323435231'),
-(6, 'adityarayy', '123456', 'jln. surya', 'Aditya', 'Ray', '081323435232'),
-(7, 'adityarey', '123456', 'jln. jurang', 'Aditya', 'Rayhan', '081323435233');
 
 --
 -- Indexes for dumped tables
@@ -115,7 +106,8 @@ ALTER TABLE `delivery`
 --
 ALTER TABLE `detail`
   ADD KEY `idTransaksi` (`idTransaksi`),
-  ADD KEY `idStorage` (`idStorage`);
+  ADD KEY `idStorage` (`idStorage`),
+  ADD KEY `idProduk` (`idProduk`);
 
 --
 -- Indexes for table `storage`
@@ -136,7 +128,8 @@ ALTER TABLE `transaksi`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`idUser`);
+  ADD PRIMARY KEY (`idUser`),
+  ADD KEY `alamat` (`alamat`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -175,7 +168,8 @@ ALTER TABLE `user`
 --
 ALTER TABLE `detail`
   ADD CONSTRAINT `detail_fk1` FOREIGN KEY (`idStorage`) REFERENCES `storage` (`idStorage`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `detail_fk2` FOREIGN KEY (`idTransaksi`) REFERENCES `transaksi` (`idTransaksi`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `detail_fk2` FOREIGN KEY (`idTransaksi`) REFERENCES `transaksi` (`idTransaksi`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `detail_ibfk_1` FOREIGN KEY (`idProduk`) REFERENCES `produk` (`idProduk`);
 
 --
 -- Constraints for table `storage`
@@ -189,6 +183,12 @@ ALTER TABLE `storage`
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_fk1` FOREIGN KEY (`idDelivery`) REFERENCES `delivery` (`idDelivery`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `transaksi_fk2` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`alamat`) REFERENCES `detailalamat` (`idAlamat`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

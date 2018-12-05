@@ -46,9 +46,6 @@
               <a class="nav-link" href="http://localhost/impalweb/index.php/controltransaksi/">Transaksi</a>
                 <span class="sr-only">(current)</span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost/impalweb/index.php/controldelivery/">Delivery</a>
-            </li>
 
           </ul>
         </div>
@@ -77,6 +74,7 @@
                       <th>ID User</th>
                       <th>ID Delivery</th>
                       <th>Tagihan</th>
+                      <th>Payment</th>
                       <th>Status</th>
                       <th>Action</th>
                     </tr>
@@ -90,10 +88,11 @@
     <td><?php echo $key->idUser; ?></td>
     <td><?php echo $key->idDelivery; ?></td>
     <td><?php echo $key->tagihan; ?></td>
+    <td><?php echo $key->payment; ?></td>
     <td><?php echo $key->status; ?></td>
     <td>
        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit<?php echo $key->idTransaksi; ?>"><i class="glyphicon glyphicon-pencil"></i></button>
-<!--         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idTransaksi; ?>"><i class="glyphicon glyphicon-trash"></i></button> -->
+        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete<?php echo $key->idTransaksi; ?>"><i class="glyphicon glyphicon-trash"></i></button>
     </td>
 
       
@@ -129,6 +128,10 @@
                                     <div class="form-group">
                                         <label class="control-label" for="judul">Tagihan</label>
                                         <input type="text" name="tagihan" class="form-control" value="<?php echo $key->tagihan;?>" id="tagihan" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="lebar">Payment</label>
+                                        <input type="text" name="payment" class="form-control" value="<?php echo $key->payment;?>" id="payment" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="panjang">Status</label>

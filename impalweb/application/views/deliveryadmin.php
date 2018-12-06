@@ -67,14 +67,14 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Produk</div>
+              Delivery</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>ID Produk</th>
-                      <th>Nama Produk</th>
+                      <th>ID Delivery</th>
+                      <th>no_resi</th>
                       <th>kurir</th>
                       <th>tgl_kirim</th>
                       <th>Action</th>
@@ -125,7 +125,7 @@
                                 <?php echo form_open("http://localhost/impalweb/index.php/controldelivery/edit?idDelivery='$key->idDelivery'"); ?>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="control-label" for="judul">Nama Produk</label>
+                                        <label class="control-label" for="judul">No_resi</label>
                                         <input type="text" name="no_resi" class="form-control" value="<?php echo $key->no_resi;?>" id="no_resi" required>
                                     </div>
                                     <div class="form-group">
@@ -153,12 +153,12 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"></button>
-                                    <h4 class="modal-title">Tambah Produk</h4>
+                                    <h4 class="modal-title">Tambah Delivery</h4>
                                 </div>
                                 <?php echo form_open("http://localhost/impalweb/index.php/controldelivery/tambah"); ?>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="control-label" for="judul">Nama Produk</label>
+                                        <label class="control-label" for="judul">No_resi</label>
                                         <input type="text" name="no_resi" class="form-control" id="no_resi" required>
                                     </div>
                                     <div class="form-group">
@@ -169,10 +169,10 @@
                                         <label class="control-label" for="deskripsi">tgl_kirim</label>
                                         <input type="text" name="tgl_kirim" class="form-control" id="tgl_kirim" required>
                                     </div>
-                                    <div class="form-group">
+  <!--                                   <div class="form-group">
                                         <label class="control-label" for="hargaSatuan">Harga Satuan</label>
                                         <input type="text" name="hargaSatuan" class="form-control" id="hargaSatuan" required>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
